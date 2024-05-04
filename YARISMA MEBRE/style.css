@@ -21,7 +21,7 @@ a:hover {
 
 /* Header Stilleri */
 header {
-    background-color: #ffffff; /* Mavi renk */
+    background-color: #ffffff;
     color: rgb(0, 0, 0); /* Yazı rengi */
     padding: 10px 20px; /* İç boşluk */
     display: flex; /* Flexbox düzeni */
@@ -37,11 +37,51 @@ header .menuBar i {
     font-size: 24px; /* Menü simgesinin boyutu */
     cursor: pointer; /* İmleci el olarak değiştirir */
 }
-header .logo{
+
+header .logo {
     padding-right: 800px;
 }
+
 header .logo img {
     height: 50px; /* Logo yüksekliği */
+    width: 210px;
+}
+
+/* Sidebar Stilleri */
+.sidebar {
+    width: 30%; /* Sidebar genişliği */
+    position: fixed;
+    top: 0;
+    left: -30%; /* Sidebar başlangıç konumu gizli */
+    height: 100%; /* Tam yükseklik */
+    background-color: #333; /* Koyu arka plan */
+    color: white; /* Yazı rengi */
+    padding: 20px;
+    transition: left 0.3s; /* Geçiş süresi */
+    z-index: 1001; /* Üst katman */
+}
+
+.sidebar ul {
+    list-style: none; /* Liste simgelerini gizle */
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px; /* Altında boşluk bırak */
+}
+
+.sidebar ul li a {
+    color: white; /* Yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 18px; /* Yazı boyutu */
+}
+
+.sidebar ul li a:hover {
+    color: #007bff; /* Üzerine gelindiğinde mavi renk */
+}
+
+.sidebar.open {
+    left: 0; /* Sidebar açılınca ekranın solunda görünmesi */
 }
 
 /* Bölüm Stilleri */
@@ -108,5 +148,11 @@ footer .right a:hover {
     section .content, section .image {
         flex-basis: 100%; /* Metin ve resimler genişliği tam ekran */
         margin-bottom: 20px; /* Bölümlerin altında boşluk bırak */
+    }
+    
+    /* Sidebar genişliği */
+    .sidebar {
+        width: 70%; /* Küçük ekranlarda sidebar genişliği */
+        left: -70%; /* Küçük ekranlarda sidebar başlangıç konumu gizli */
     }
 }
