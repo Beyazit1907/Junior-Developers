@@ -2,6 +2,7 @@
 body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 body {
@@ -39,7 +40,7 @@ header .menuBar i {
 }
 
 header .logo {
-    padding-right: 800px;
+    padding-right: 600px;
 }
 
 header .logo img {
@@ -97,6 +98,12 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
 }
 
+section h2 {
+    text-align: center; /* Başlıkları yatay olarak ortala */
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
 section .content {
     flex-basis: 60%; /* Metin kısmının genişliği */
     padding-right: 20px; /* Metin ve resim arasında boşluk bırak */
@@ -113,19 +120,57 @@ section .image img {
     border-radius: 10px; /* Resim köşelerini yuvarlaklaştır */
 }
 
+/* Tek sıralı section'lar (1., 3., 5. vs. section) */
+section:nth-of-type(odd) {
+    display: flex;
+    flex-direction: row; /* İçerik ve resim yatay olarak düzenlenir */
+}
+
+section:nth-of-type(odd) .content {
+    flex-basis: 60%; /* İçeriğin genişliği */
+    padding-right: 20px; /* Sağ tarafa boşluk bırak */
+}
+
+section:nth-of-type(odd) .image {
+    flex-basis: 40%; /* Resmin genişliği */
+}
+
+/* Çift sıralı section'lar (2., 4., 6. vs. section) */
+section:nth-of-type(even) {
+    display: flex;
+    flex-direction: row-reverse; /* İçerik ve resim tersten yatay olarak düzenlenir */
+}
+
+section:nth-of-type(even) .content {
+    flex-basis: 60%; /* İçeriğin genişliği */
+    padding-left: 20px; /* Sol tarafa boşluk bırak */
+}
+
+section:nth-of-type(even) .image {
+    flex-basis: 40%; /* Resmin genişliği */
+}
+
+
 /* Footer Stilleri */
 footer {
-    background-color: #051a00; /* Koyu arka plan rengi */
+    background-color: #000c24e1; /* Koyu arka plan rengi */
     color: white; /* Yazı rengi */
     padding: 20px;
+    display: flex; /* Flexbox düzeni ile içeriği yatay olarak yerleştir */
+    justify-content: space-between; /* Bölümleri eşit olarak dağıt */
+    align-items: center; /* Bölümlerin içeriklerini dikey olarak ortalar */
 }
 
-footer .left, footer .center, footer .right {
-    flex-basis: 33.33%; /* Üç bölüm eşit genişlikte */
-    padding: 10px;
+footer h2{
+    margin-bottom: 10px;
 }
 
-footer .left ul, footer .center p, footer .right a {
+footer, footer .center, footer .right {
+    flex-basis: 33.33%; /* Üç bölümün eşit genişlikte olması için */
+    text-align: center; /* Bölümlerin içeriklerini yatay olarak ortalar */
+}
+
+footer, footer .center p, footer .right a {
     color: white; /* Yazı rengi */
 }
 
@@ -137,6 +182,7 @@ footer .right a {
 footer .right a:hover {
     color: #007bff; /* Sosyal medya simgelerinin üzerine gelindiğinde renk değişimi */
 }
+
 
 /* Responsive Tasarım */
 @media screen and (max-width: 768px) {
