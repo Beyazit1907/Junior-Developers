@@ -191,15 +191,22 @@ footer h2{
     margin-bottom: 10px;
 }
 
-footer, footer .center, footer .right {
+footer, footer .right {
     flex-basis: 33.33%; /* Üç bölümün eşit genişlikte olması için */
     text-align: center; /* Bölümlerin içeriklerini yatay olarak ortalar */
 }
 
-footer, footer .center p, footer .right a {
+footer, footer .right a {
     color: white; /* Yazı rengi */
 }
 
+footer .right{
+    margin-left: 450px;
+}
+
+footer .right h6{
+    margin-bottom: -10px;
+}
 footer .right a {
     margin-right: 10px;
     color: white; /* Sosyal medya simgelerinin rengi */
