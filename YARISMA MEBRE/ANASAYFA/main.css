@@ -39,8 +39,34 @@ header .menuBar i {
     cursor: pointer; /* İmleci el olarak değiştirir */
 }
 
+header .log-in{
+    margin-right: -100px;
+}
+
+/* Giriş Yap bağlantısının arka plan rengini ayarlama */
+header .log-in a {
+    background-color: #2e57dd; /* İstediğiniz arka plan rengini burada belirleyin */
+    color: white; /* Yazı rengini belirleyin */
+    padding: 10px 15px; /* İç boşluk ekleyerek buton görünümü oluşturun */
+    border-radius: 5px; /* Kenarları yuvarlaklaştırın */
+    transition: background-color 0.3s; /* Geçiş süresi */
+}
+
+header .log-in a:hover {
+    background-color: #6e95ff; /* Üzerine gelindiğinde farklı bir renk */
+}
+
+
+header .sign-in{
+    padding-right: 50px;
+    margin-left: -400px;
+}
+header .sign-in a{
+    color: rgb(100, 100, 100);
+}
+
 header .logo {
-    padding-right: 600px;
+    margin-right: -200px;
 }
 
 header .logo img {
@@ -50,15 +76,15 @@ header .logo img {
 
 /* Sidebar Stilleri */
 .sidebar {
-    width: 30%; /* Sidebar genişliği */
+    width: 10%; /* Sidebar genişliği: ekranın yarısı */
     position: fixed;
     top: 0;
-    left: -30%; /* Sidebar başlangıç konumu gizli */
-    height: 100%; /* Tam yükseklik */
-    background-color: #333; /* Koyu arka plan */
-    color: white; /* Yazı rengi */
+    left: -50%; /* Sidebar başlangıçta ekranın sol dışında */
+    height: 100%; /* Yükseklik: tam ekran */
+    background-color: #333; /* Arka plan rengi */
+    color: white; /* Metin rengi */
     padding: 20px;
-    transition: left 0.3s; /* Geçiş süresi */
+    transition: left 0.3s; /* Sol pozisyonda geçiş süresi */
     z-index: 1001; /* Üst katman */
 }
 
