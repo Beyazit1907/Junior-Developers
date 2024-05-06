@@ -90,7 +90,7 @@ header .logo img {
 
 .sidebar ul {
     list-style: none; /* Liste simgelerini gizle */
-    padding: 0;
+    padding: 0 ;
 }
 
 .sidebar ul li {
