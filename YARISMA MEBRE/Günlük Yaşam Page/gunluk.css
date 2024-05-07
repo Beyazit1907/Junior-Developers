@@ -1,0 +1,247 @@
+/* Genel Stil */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Arka plan rengi */
+    color: #333; /* Yazı rengi */
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #007bff; 
+}
+
+/* Header Stilleri */
+header {
+    background-color: #ffcccc;
+    color: rgb(0, 0, 0); /* Yazı rengi */
+    padding: 10px 20px; /* İç boşluk */
+    display: flex; /* Flexbox düzeni */
+    justify-content: space-between; /* Öğeler arasında eşit boşluk bırak */
+    align-items: center; /* Öğeleri dikey olarak ortala */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding-bottom: 5px;
+}
+
+header .menuBar i {
+    font-size: 24px; /* Menü simgesinin boyutu */
+    cursor: pointer; /* İmleci el olarak değiştirir */
+}
+
+header .log-in{
+    margin-right: -100px;
+}
+
+/* Giriş Yap bağlantısının arka plan rengini ayarlama */
+header .log-in a {
+    background-color: #2e57dd; /* İstediğiniz arka plan rengini burada belirleyin */
+    color: white; /* Yazı rengini belirleyin */
+    padding: 10px 15px; /* İç boşluk ekleyerek buton görünümü oluşturun */
+    border-radius: 5px; /* Kenarları yuvarlaklaştırın */
+    transition: background-color 0.3s; /* Geçiş süresi */
+}
+
+header .log-in a:hover {
+    background-color: #6e95ff; /* Üzerine gelindiğinde farklı bir renk */
+}
+
+header .sign-in{
+    padding-right: 50px;
+    margin-left: -400px;
+}
+header .sign-in a {
+    background-color: #ffffff; /* İstediğiniz arka plan rengini burada belirleyin */
+    color: rgb(0, 0, 0); /* Yazı rengini belirleyin */
+    padding: 10px 15px; /* İç boşluk ekleyerek buton görünümü oluşturun */
+    border-radius: 5px; /* Kenarları yuvarlaklaştırın */
+    transition: background-color 0.3s; /* Geçiş süresi */
+}
+header .sign-in a:hover{
+    background-color: #c9c9c9;
+}
+header .log-in a:hover {
+    background-color: #6e95ff; /* Üzerine gelindiğinde farklı bir renk */
+}
+
+header .logo {
+    margin-right: -200px;
+}
+
+header .logo img {
+    height: 50px; /* Logo yüksekliği */
+    width: 210px;
+}
+
+/* Sidebar Stilleri */
+.sidebar {
+    width: 16%; /* Sidebar genişliği: ekranın yarısı */
+    position: fixed;
+    top: 0;
+    left: -50%; /* Sidebar başlangıçta ekranın sol dışında */
+    height: 100%; /* Yükseklik: tam ekran */
+    background-color: #333; /* Arka plan rengi */
+    color: white; /* Metin rengi */
+    padding: 20px;
+    transition: left 0.3s; /* Sol pozisyonda geçiş süresi */
+    z-index: 1001; /* Üst katman */
+}
+
+.sidebar ul {
+    list-style: none; /* Liste simgelerini gizle */
+    padding: 0 ;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px; /* Altında boşluk bırak */
+    text-align: left ;
+}
+
+.sidebar ul li a {
+    color: white; /* Yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 18px; /* Yazı boyutu */
+}
+
+.sidebar ul li a:hover {
+    color: #007bff; /* Üzerine gelindiğinde mavi renk */
+}
+
+.sidebar.open {
+    left: 0; /* Sidebar açılınca ekranın solunda görünmesi */
+}
+
+/* Bölüm Stilleri */
+section {
+    padding: 20px;
+    padding-top: 100px;
+    display: flex; /* Flexbox düzeni */
+    justify-content: space-between; /* Metin ve resmin arasında eşit boşluk bırak */
+    margin-bottom: 20px; /* Altında boşluk bırak */
+    align-items: center; /* Öğeleri dikey olarak ortala */
+    background-color: white; /* Bölüm arka planı */
+    border-radius: 10px; /* Köşeleri yuvarlaklaştır */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+section h2 {
+    text-align: center; /* Başlıkları yatay olarak ortala */
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section .content {
+    flex-basis: 60%; /* Metin kısmının genişliği */
+    padding-right: 20px; /* Metin ve resim arasında boşluk bırak */
+}
+
+section .image {
+    flex-basis: 40%; /* Resim kısmının genişliği */
+    text-align: center; /* Resmin ortalanması */
+}
+
+section .image img {
+    max-width: 100%; /* Resmin genişliği */
+    height: auto; /* Resmin yüksekliği otomatik ayarlanır */
+    border-radius: 10px; /* Resim köşelerini yuvarlaklaştır */
+}
+
+/* Tek sıralı section'lar (1., 3., 5. vs. section) */
+section:nth-of-type(odd) {
+    display: flex;
+    flex-direction: row; /* İçerik ve resim yatay olarak düzenlenir */
+}
+
+section:nth-of-type(odd) .content {
+    flex-basis: 60%; /* İçeriğin genişliği */
+    padding-right: 20px; /* Sağ tarafa boşluk bırak */
+}
+
+section:nth-of-type(odd) .image {
+    flex-basis: 40%; /* Resmin genişliği */
+}
+
+/* Çift sıralı section'lar (2., 4., 6. vs. section) */
+section:nth-of-type(even) {
+    display: flex;
+    flex-direction: row-reverse; /* İçerik ve resim tersten yatay olarak düzenlenir */
+}
+
+section:nth-of-type(even) .content {
+    flex-basis: 60%; /* İçeriğin genişliği */
+    padding-left: 20px; /* Sol tarafa boşluk bırak */
+}
+
+section:nth-of-type(even) .image {
+    flex-basis: 40%; /* Resmin genişliği */
+}
+
+
+/* Footer Stilleri */
+footer {
+    background-color: #000c24e1; /* Koyu arka plan rengi */
+    color: white; /* Yazı rengi */
+    padding: 20px;
+    display: flex; /* Flexbox düzeni ile içeriği yatay olarak yerleştir */
+    justify-content: space-between; /* Bölümleri eşit olarak dağıt */
+    align-items: center; /* Bölümlerin içeriklerini dikey olarak ortalar */
+}
+
+footer h2{
+    margin-bottom: 10px;
+}
+
+footer, footer .right {
+    flex-basis: 33.33%; /* Üç bölümün eşit genişlikte olması için */
+    text-align: center; /* Bölümlerin içeriklerini yatay olarak ortalar */
+}
+
+footer, footer .right a {
+    color: white; /* Yazı rengi */
+}
+
+footer .right{
+    margin-left: 450px;
+}
+
+footer .right h6{
+    margin-bottom: -10px;
+}
+footer .right a {
+    margin-right: 10px;
+    color: white; /* Sosyal medya simgelerinin rengi */
+}
+
+footer .right a:hover {
+    color: #007bff; /* Sosyal medya simgelerinin üzerine gelindiğinde renk değişimi */
+}
+
+
+/* Responsive Tasarım */
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column; /* Küçük ekranlarda dikey düzende */
+        align-items: center; /* İçeriği ortalar */
+    }
+
+    section .content, section .image {
+        flex-basis: 100%; /* Metin ve resimler genişliği tam ekran */
+        margin-bottom: 20px; /* Bölümlerin altında boşluk bırak */
+    }
+    
+    /* Sidebar genişliği */
+    .sidebar {
+        width: 70%; /* Küçük ekranlarda sidebar genişliği */
+        left: -70%; /* Küçük ekranlarda sidebar başlangıç konumu gizli */
+    }
+}

@@ -22,7 +22,7 @@ a:hover {
 
 /* Header Stilleri */
 header {
-    background-color: #ffffff;
+    background-color: #ffcccc;
     color: rgb(0, 0, 0); /* Yazı rengi */
     padding: 10px 20px; /* İç boşluk */
     display: flex; /* Flexbox düzeni */
@@ -31,7 +31,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    padding-bottom: 0px;
+    padding-bottom: 5px;
 }
 
 header .menuBar i {
@@ -56,13 +56,22 @@ header .log-in a:hover {
     background-color: #6e95ff; /* Üzerine gelindiğinde farklı bir renk */
 }
 
-
 header .sign-in{
     padding-right: 50px;
     margin-left: -400px;
 }
-header .sign-in a{
-    color: rgb(100, 100, 100);
+header .sign-in a {
+    background-color: #ffffff; /* İstediğiniz arka plan rengini burada belirleyin */
+    color: rgb(0, 0, 0); /* Yazı rengini belirleyin */
+    padding: 10px 15px; /* İç boşluk ekleyerek buton görünümü oluşturun */
+    border-radius: 5px; /* Kenarları yuvarlaklaştırın */
+    transition: background-color 0.3s; /* Geçiş süresi */
+}
+header .sign-in a:hover{
+    background-color: #c9c9c9;
+}
+header .log-in a:hover {
+    background-color: #6e95ff; /* Üzerine gelindiğinde farklı bir renk */
 }
 
 header .logo {
@@ -76,7 +85,7 @@ header .logo img {
 
 /* Sidebar Stilleri */
 .sidebar {
-    width: 15%; /* Sidebar genişliği: ekranın yarısı */
+    width: 16%; /* Sidebar genişliği: ekranın yarısı */
     position: fixed;
     top: 0;
     left: -50%; /* Sidebar başlangıçta ekranın sol dışında */
@@ -95,6 +104,7 @@ header .logo img {
 
 .sidebar ul li {
     margin-bottom: 20px; /* Altında boşluk bırak */
+    text-align: left ;
 }
 
 .sidebar ul li a {
@@ -116,7 +126,7 @@ section {
     padding: 20px;
     padding-top: 100px;
     display: flex; /* Flexbox düzeni */
-    justify-content: center; /* Metin ve resmin arasında eşit boşluk bırak */
+    justify-content: space-between; /* Metin ve resmin arasında eşit boşluk bırak */
     margin-bottom: 20px; /* Altında boşluk bırak */
     align-items: center; /* Öğeleri dikey olarak ortala */
     background-color: white; /* Bölüm arka planı */
@@ -124,48 +134,27 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
 }
 
-section h2{
+section h2 {
     text-align: center; /* Başlıkları yatay olarak ortala */
     margin-bottom: 40px;
     font-size: 30px;
 }
-section .text-block{
-    text-align: center;
-    justify-content: center;
-}
-.text-block{
-    text-align: center;
+
+section .content {
+    flex-basis: 60%; /* Metin kısmının genişliği */
+    padding-right: 20px; /* Metin ve resim arasında boşluk bırak */
 }
 
-/* Giriş bölümünün düzeni */
-.giris {
-    display: flex;
-    justify-content: space-between;
+section .image {
+    flex-basis: 40%; /* Resim kısmının genişliği */
+    text-align: center; /* Resmin ortalanması */
 }
 
-/* İçeriğin genişliği ve hizalanması */
-.content {
-    width: 70%; /* İçerik genişliği */
-    padding-right: 20px; /* İçeriğin sağında boşluk */
-    text-align: center; /* Paragrafları düzenleme */
+section .image img {
+    max-width: 100%; /* Resmin genişliği */
+    height: auto; /* Resmin yüksekliği otomatik ayarlanır */
+    border-radius: 10px; /* Resim köşelerini yuvarlaklaştır */
 }
-
-/* Resimlerin sağda yerleşimi */
-.image {
-    width: 30%; /* Resim genişliği */
-    display: flex; /* İçeriği flex düzeninde yapma */
-    flex-direction: column; /* Resimleri alt alta düzenleme */
-    align-items: flex-end; /* Resimleri sağa hizalama */
-}
-
-/* Paragrafların üstündeki resimlerin boyutları */
-.image img {
-    width: 100%; /* Resmin genişliği */
-    height: auto; /* Yüksekliği otomatik */
-    margin-bottom: 20px; /* Resim ve paragraf arasında boşluk */
-}
-
-
 
 /* Tek sıralı section'lar (1., 3., 5. vs. section) */
 section:nth-of-type(odd) {
