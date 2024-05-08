@@ -22,7 +22,7 @@ a:hover {
 
 /* Header Stilleri */
 header {
-    background-color: #ffffff;
+    background-color: #ffe1d0;
     color: rgb(0, 0, 0); /* Yazı rengi */
     padding: 10px 20px; /* İç boşluk */
     display: flex; /* Flexbox düzeni */
